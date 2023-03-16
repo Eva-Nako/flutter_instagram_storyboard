@@ -288,7 +288,7 @@ class StoryButtonData {
     ),
     this.borderAfterSeen = const BoxDecoration(
       borderRadius: BorderRadius.all(
-        Radius.circular(15.0),
+        Radius.circular(100.0),
       ),
       border: Border.fromBorderSide(
         BorderSide(
