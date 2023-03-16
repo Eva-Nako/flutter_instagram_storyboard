@@ -121,7 +121,7 @@ class _StoryButtonState extends State<StoryButton>
           aspectRatio: widget.buttonData.aspectRatio,
           child: Container(
             decoration: widget.buttonData._isWatched
-                ? null
+                ? widget.buttonData.borderAfterSeen
                 : widget.buttonData.borderDecoration,
             child: Padding(
               padding: EdgeInsets.all(
@@ -207,6 +207,7 @@ class StoryButtonData {
   final double aspectRatio;
   final BoxDecoration buttonDecoration;
   final BoxDecoration borderDecoration;
+  final BoxDecoration borderAfterSeen;
   final double borderOffset;
   final InteractiveInkFeatureFactory? inkFeatureFactory;
   final Widget child;
@@ -275,6 +276,17 @@ class StoryButtonData {
       color: Color.fromARGB(255, 226, 226, 226),
     ),
     this.borderDecoration = const BoxDecoration(
+      borderRadius: BorderRadius.all(
+        Radius.circular(15.0),
+      ),
+      border: Border.fromBorderSide(
+        BorderSide(
+          color: Color.fromARGB(255, 176, 176, 176),
+          width: 1.5,
+        ),
+      ),
+    ),
+    this.borderAfterSeen = const BoxDecoration(
       borderRadius: BorderRadius.all(
         Radius.circular(15.0),
       ),
