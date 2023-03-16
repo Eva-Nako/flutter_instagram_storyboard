@@ -38,7 +38,7 @@ class StoryPageScaffold extends StatelessWidget {
                 child: GradientTransition(
                   width: double.infinity,
                   height: 100.0,
-                  baseColor: Color.fromARGB(255, 230, 228, 228),
+                  baseColor: Colors.white,
                   isReversed: true,
                 ),
               ),
